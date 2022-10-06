@@ -7,7 +7,7 @@ let pokemonList = [
 //Lets user know pokemon type and measurments
 for (let i = 0;
   i < pokemonList.length; i++){
-    if pokemonList[i].height >= 7) {
+    if (pokemonList[i].height >= 7) {
       document.write(pokemonList[i].name + " is " + pokemonList[i].height + " meters tall and is " + pokemonList[i].type + "type. What a big pokemon!<br>")
     }
     else {
