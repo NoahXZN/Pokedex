@@ -1,8 +1,27 @@
-let pokemonList = [
+let pokemonList (function()=
+ let repository =[
   {name: 'Aron', height: 4, type: ['steel' , 'rock']},
   {name: 'Mudkip', height: 4, type: 'water'},
   {name: 'Bulbasaur', height: 7, type: ['grass' , 'poison']}
 ];
+
+function getAll () {
+  return repository;
+}
+
+function add(pokemon) {
+  repository.push(pokemon);
+}
+
+function showDetails(pokemon){
+  console.log(pokemon.name)
+}
+
+console.log(pokemonRepository.getAll());
+
+pokemonRepository.getAll().forEach(function(pokemon){
+  pokemonRepository.addListItem(pokemon);
+})
 
 //Lets user know pokemon type and measurments
 for (let i = 0;
