@@ -28,20 +28,27 @@ let pokemonRepository = (function() {
     console.log(pokemon.name)
   }
 
+  function addListItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listpokemon = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listpokemon.appendChild(button);
+    pokemonList.appendChild(listpokemon);
+  }
+
   return {
     getAll,
     add,
     showDetails,
-  }
-}());
+    addListItem,
+  };
 
-pokemonRepository.getAll().forEach(function(pokemon) {
-  if (pokemon.height >= 7) {
-    document.write(pokemon.name + " is " + pokemon.height + " meters tall and is " + pokemon.type + " type. What a big pokemon!<br>")
-  } else {
-    document.write(pokemon.name + " is " + pokemon.height + " meters tall and is " + pokemon.type + " type. Great catch!<br>")
-  }
-})
+  pokemonRepository.getAll().forEach(function(pokemon)){
+    pokemonRepository.addListItem(pokemon);
+  });
+
 
 //Lets user know pokemon type and measurments
 for (let i = 0; i < pokemonList.length; i++) {
@@ -51,15 +58,3 @@ for (let i = 0; i < pokemonList.length; i++) {
     document.write(pokemonList[i].name + " is " + pokemonList[i].height + " meters tall and is " + pokemonList[i].type + " type. Great catch!<br>")
   }
 }
-
-
-//Lets user know pokemon type and measurments
-for (let i = 0;
-  i < pokemonList.length; i++){
-    if (pokemonList[i].height >= 7) {
-      document.write(pokemonList[i].name + " is " + pokemonList[i].height + " meters tall and is " + pokemonList[i].type + " type. What a big pokemon!<br>")
-    }
-    else {
-      document.write(pokemonList[i].name + " is " + pokemonList[i].height + " meters tall and is " + pokemonList[i].type + " type. Great catch!<br>")
-    }
-  }
