@@ -16,49 +16,7 @@ let pokemonRepository = (function() {
     }
   ];
 
-  function getAll() {
-    return repositoryList;
-  }
-
-  function add(pokemon) {
-    repository.push(pokemon);
-  }
-
-  function showDetails(pokemon) {
-    console.log(pokemon.name)
-  }
-
-  function addListItem(pokemon) {
-
-    let pokemonList = document.querySelector(".pokemon-list");
-    let listpokemon = document.createElement("li");
-    let button = document.createElement("button");
-    button.innerText = pokemon.name;
-    button.classList.add("button-class");
-    listpokemon.appendChild(button);
-    pokemonList.appendChild(listpokemon);
-  }
-
-
-
-  return {
-    getAll,
-    add,
-    showDetails,
-    addListItem,
-  }
-}());
-
-pokemonRepository.getAll().forEach(function(pokemon) {
-  pokemonRepository.addListItem(pokemon);
-});
-
-let button = document.querySelector(".button-class");
-
-button.addEventListener('click', function(event) {
-  showDetails(pokemon)
-})
-var pokemonRepository = (function() {
+ var pokemonRepository = (function() {
 var repositoryList = [];
 var apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
 
