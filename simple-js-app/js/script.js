@@ -153,3 +153,61 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 pokemonRepository.addListItem(pokemon);
 });
 });
+
+// show the modal content and then make empty
+function showModal(item) {
+let modalBody = $(".modal-body");
+let modalTitle = $(".modal-title");
+let modalHeader = $(".modal-header");
+let $modalContainer = $("#modal-container");
+
+modalHeader.empty();
+modalTitle.empty();
+modalBody.empty();
+
+//creating element for name in modal content
+let nameElement = $("<h1>" + item.name + "</h1>");
+// // creating img in modal content
+let imageElementFront = $('<img class="modal-img" style="width:50%">');
+imageElementFront.attr("src", item.imageUrlFront);
+let imageElementBack = $('<img class="modal-img" style="width:50%">');
+imageElementBack.attr("src", item.imageUrlBack);
+// //creating element for height in modal content
+let heightElement = $("<p>" + "height : " + item.height + "</p>");
+// //creating element for weight in modal content
+let weightElement = $("<p>" + "weight : " + item.weight + "</p>");
+// //creating element for type in modal content
+let typesElement = $("<p>" + "types : " + item.types + "</p>");
+// //creating element for abilities in modal content
+let abilitiesElement = $("<p>" + "abilities : " + item.abilities + "</p>");
+
+modalTitle.append(nameElement);
+modalBody.append(imageElementFront);
+modalBody.append(imageElementBack);
+modalBody.append(heightElement);
+modalBody.append(weightElement);
+modalBody.append(typesElement);
+modalBody.append(abilitiesElement);
+}
+
+//modal
+function showModal(pokemon) {
+let modalBody = $(".modal-body");
+let modalTitle = $(".modal-title");
+
+modalTitle.empty();
+modalBody.empty();
+
+let titleElement = $("<h1>" + pokemon.name + "</h1>");
+let imageElement = $('<img class="modal-img">');
+imageElement.attr("src", pokemon.imageUrl);
+let contentElement = $("<p>" + "Height: " + pokemon.height + "</p>");
+let typesElement = $("<p>" + "Type: " + pokemon.types + "</p>");
+let abilityElement = $("<p>" + "Ability: " + pokemon.abilities + "</p>");
+
+modalTitle.append(titleElement);
+modalBody.append(imageElement);
+modalBody.append(contentElement);
+modalBody.append(typesElement);
+modalBody.append(abilityElement);
+}
