@@ -1,6 +1,5 @@
 :root {
-  --primary-color: yellow;
-  --secondary-color: rgb(222, 140, 26);
+background-color: yellow;
 }
 
 body {
@@ -9,7 +8,7 @@ body {
 }
 
 .pokemon-header {
-  background-color: var(--primary-color);
+  background-color: red;
   padding: 7px;
 }
 
@@ -18,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: aqua;
 }
 
 .pokemon-button {
@@ -34,7 +34,10 @@ body {
   padding: 0;
 }
 
-.pokemon-img {
-  width: 150px;
-  height: 150px;
+
+.container{
+  background-color: darkgreen;
+  padding: 20px;
 }
+
+
