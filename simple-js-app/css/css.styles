@@ -1,5 +1,5 @@
 :root {
-background-color: yellow;
+background-color: red;
 }
 
 body {
@@ -8,8 +8,9 @@ body {
 }
 
 .pokemon-header {
-  background-color: red;
-  padding: 7px;
+  background-color: #7FFF00;
+  Font-family:'Monospace',monaco;
+  border: 4mm ridge rgba(186, 85, 211);
 }
 
 .pokedex {
@@ -17,27 +18,40 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: aqua;
+  color: #663399;
 }
 
 .pokemon-button {
   font-size: 20px;
-  padding: 12px;
+  padding: 20px;
   width: 100%;
+  background-color:#B0E0E6;
+  font-family:'Monospace',monaco;
 }
 
 .pokemon-list {
-  list-style-type: none;
-  width: 90%;
-  max-width: 500px;
-  margin: 0;
-  padding: 0;
+    margin: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 200px;
+    max-width: 700px;
+    min-width: 200px;
+    border-radius: 100%;
+    position: relative;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap:50px;
+
+
 }
 
 
 .container{
-  background-color: darkgreen;
+  background-color: #7FFF00;
   padding: 20px;
+  text-align: center;
+  font-family:'Monospace',monaco;
+  border: 4mm ridge rgba(186, 85, 211);
 }
 
 
